@@ -7,6 +7,7 @@ import CustomLineChart from '../organisms/LineChart';
 import CustomPieChart from '../organisms/PieChart';
 import CustomBarChart from '../organisms/BarChart';
 import Footer from '../atoms/Footer';
+import DownloadIcon from '../atoms/DownloadIcon';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import '../styles/pages/ChartSales.css';
@@ -63,9 +64,8 @@ const ChartSales = () => {
                     </div>
                 </section>
             </div>
-            <div className="download-icon" onClick={handleDownload}>
-                <FaDownload className="download-icon" />
-            </div>
+            <DownloadIcon handleDownload={handleDownload} />
+
             <Footer className="footer-chart" />
         </div>
     );

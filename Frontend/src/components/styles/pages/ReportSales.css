@@ -14,16 +14,38 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    position: relative;
+    height: auto; /* Permite que el header ajuste su altura */
 }
 
 .LogoReport {
     height: 50px;
 }
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column; /* Permite que los elementos dentro de header-right se apilen verticalmente */
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor */
+}
+
+.arrow-button-container {
+    margin-right: 20px;
+}
+
+.header-download {
+    margin-top: auto; /* Empuja el botón de descarga hacia abajo dentro de header-right */
+    margin-bottom: 10px; /* Ajusta este valor según sea necesario */
+}
+
 .header-report nav a {
     color: rgba(255, 255, 255, 0.623);
     text-decoration: none;
-    font-size: 2.0em;
+    font-size: 1.5em;
     margin-right: 20px;
     letter-spacing: 1px;
 }
@@ -32,6 +54,8 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 80px;
 }
 
 .report-content {
@@ -49,48 +73,57 @@ h2 {
     margin: 0.5em 0;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
-.paragrah1 {
+.paragrah1, .paragrah2 {
     font-family: 'Inter';
     font-weight: 700;
     margin: 0.5em 0;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
+    margin-right: 0;
+}
+
+.paragrah1 {
     margin-right: 850px;
 }
 
 .paragrah2 {
-    font-family: 'Inter';
-    font-weight: 700;
-    margin: 0.5em 0;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
     margin-right: 900px;
 }
 
+@media (max-width: 1024px) {
+    .paragrah1 {
+        margin-right: 0;
+    }
+    .paragrah2 {
+        margin-right: 0;
+    }
+}
+
 .report-table {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     margin: 1em auto;
     border-collapse: collapse;
+    overflow-x: auto;
+}
+
+th, td {
+    border: 1px solid #b30000;
+    padding: 1em;
+    font-family: 'Inter';
+    letter-spacing: 1px;
 }
 
 th {
-    border: 1px solid #b30000;
-    padding: 1.5em;
-    font-family: 'Inter';
     font-weight: 600;
-    letter-spacing: 1px;
 }
 
 td {
-    font-family: 'Inter';
     font-weight: 800;
     color: rgb(0, 0, 0);
-    border: 1px solid #b30000;
-    padding: 1.5em;
-    letter-spacing: 1px;
 }
 
 thead {
@@ -100,23 +133,78 @@ thead {
 
 .charts-row {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 2em 0;
 }
 
+@media (min-width: 768px) {
+    .charts-row {
+        flex-direction: row;
+    }
+}
+
 .chart-wrapper {
-    width: 45%;
+    width: 100%;
+    max-width: 45%;
     height: 300px;
-    margin: 0 auto;
+    margin: 1em 0;
 }
 
 .chart-wrapper.full-width {
-    width: 70%;
+    max-width: 70%;
     height: 400px;
     margin: 2em auto;
 }
 
 .FooterReport {
     height: 4rem;
+    text-align: center;
+    padding: 1em 0;
+}
+
+@media (max-width: 768px) {
+    .header-report nav a {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    .paragrah1 {
+        margin-right: 0;
+    }
+
+    .paragrah2 {
+        margin-right: 0;
+    }
+
+    .chart-wrapper {
+        width: 90%;
+        height: auto;
+    }
+
+    .chart-wrapper.full-width {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-report nav a {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    th, td {
+        padding: 0.5em;
+        font-size: 0.8em;
+    }
 }
