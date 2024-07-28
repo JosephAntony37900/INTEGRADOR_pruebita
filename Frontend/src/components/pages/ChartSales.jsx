@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaDownload } from "react-icons/fa6";
 import Logo from '../atoms/Logo';
-import SidebarMenu from '../molecules/SidebarMenu';
 import CustomLineChart from '../organisms/LineChart';
 import CustomPieChart from '../organisms/PieChart';
 import CustomBarChart from '../organisms/BarChart';
 import Footer from '../atoms/Footer';
+import DownloadIcon from '../atoms/DownloadIcon';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import '../styles/pages/ChartSales.css';
@@ -29,12 +29,6 @@ const ChartSales = () => {
         <div className="chart-page">
             <header className="navbar">
                 <div className="navbar-left">
-                    <>
-                        <SidebarMenu />
-                        <button className="menu-btn">
-                            <i className="fas fa-bars"></i>
-                        </button>
-                    </>
                     <div className="header-line">
                         <Logo className="logo-sales-history" />
                     </div>
@@ -60,11 +54,11 @@ const ChartSales = () => {
                         <div className="chart-row">
                             <CustomBarChart className="chart-bar" />
                         </div>
+                        <div className="Down-Chart">
+                            <DownloadIcon handleDownload={handleDownload} />
+                        </div>
                     </div>
                 </section>
-            </div>
-            <div className="download-icon" onClick={handleDownload}>
-                <FaDownload className="download-icon" />
             </div>
             <Footer className="footer-chart" />
         </div>

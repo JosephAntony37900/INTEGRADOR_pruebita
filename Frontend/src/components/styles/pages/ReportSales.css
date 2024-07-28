@@ -1,122 +1,246 @@
 body {
-    font-family: 'Inter';
-    color: #b30000;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    letter-spacing: 1px;
+  font-family: "Inter";
+  color: #b30000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
 }
 
 .header-report {
-    background-color: #b30000;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
+  background-color: #b30000;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: auto;
 }
 
 .LogoReport {
-    height: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.arrow-return {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #b30000;
+}
+
+.header-download {
+  position: absolute;
+  bottom: 90px;
+  right: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #b30000;
+}
+
+.header-report nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
 .header-report nav a {
-    color: rgba(255, 255, 255, 0.623);
-    text-decoration: none;
-    font-size: 2.0em;
-    margin-right: 20px;
-    letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.623);
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-right: 20px;
+  letter-spacing: 1px;
 }
 
 .report-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 80px;
 }
 
 .report-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 h1 {
-    margin: 0.5em 0;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
-    font-size: 1.5em;
+  margin: 0.5em 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 1.5em;
 }
 
 h2 {
-    margin: 0.5em 0;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
-    font-size: 2.5em;
+  margin: 0.5em 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 2em;
+}
+
+.paragrah1,
+.paragrah2 {
+  font-family: "Inter";
+  font-weight: 700;
+  margin: 0.5em 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  margin-right: 0;
 }
 
 .paragrah1 {
-    font-family: 'Inter';
-    font-weight: 700;
-    margin: 0.5em 0;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
-    margin-right: 850px;
+  margin-right: 850px;
 }
 
 .paragrah2 {
-    font-family: 'Inter';
-    font-weight: 700;
-    margin: 0.5em 0;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
-    margin-right: 900px;
+  margin-right: 900px;
+}
+
+@media (max-width: 1024px) {
+  .paragrah1 {
+    margin-right: 0;
+  }
+  .paragrah2 {
+    margin-right: 0;
+  }
 }
 
 .report-table {
-    width: 80%;
-    margin: 1em auto;
-    border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin: 1em auto;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+th,
+td {
+  border: 1px solid #b30000;
+  padding: 1em;
+  font-family: "Inter";
+  letter-spacing: 1px;
 }
 
 th {
-    border: 1px solid #b30000;
-    padding: 1.5em;
-    font-family: 'Inter';
-    font-weight: 600;
-    letter-spacing: 1px;
+  font-weight: 600;
 }
 
 td {
-    font-family: 'Inter';
-    font-weight: 800;
-    color: rgb(0, 0, 0);
-    border: 1px solid #b30000;
-    padding: 1.5em;
-    letter-spacing: 1px;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
 }
 
 thead {
-    background-color: #b30000;
-    color: white;
+  background-color: #b30000;
+  color: white;
 }
 
 .charts-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0;
+}
+
+@media (min-width: 768px) {
+  .charts-row {
+    flex-direction: row;
+  }
 }
 
 .chart-wrapper {
-    width: 45%;
-    height: 300px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 45%;
+  height: 300px;
+  margin: 1em 0;
 }
 
 .chart-wrapper.full-width {
-    width: 70%;
-    height: 400px;
-    margin: 2em auto;
+  max-width: 70%;
+  height: 400px;
+  margin: 2em auto;
 }
 
 .FooterReport {
-    height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #333;
+  text-align: center;
+  padding: 10px 20px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .header-report nav a {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+
+  .paragrah1 {
+    margin-right: 0;
+  }
+
+  .paragrah2 {
+    margin-right: 0;
+  }
+
+  .chart-wrapper {
+    width: 90%;
+    height: auto;
+  }
+
+  .chart-wrapper.full-width {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-report nav a {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+    font-size: 0.8em;
+  }
 }
