@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const PurchaseItem = ({ product, provider, price, quantity, date }) => {
   return (

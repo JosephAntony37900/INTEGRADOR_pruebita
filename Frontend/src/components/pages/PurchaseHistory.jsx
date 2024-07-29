@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import SidebarMenu from '../molecules/SidebarMenu';
-import Logo from '../atoms/Logo';
-import PurchaseItem from '../organisms/PurchaseItem';
-import ModalPurchase from '../molecules/ModalPurchase';
-import '../styles/pages/PurchaseHistory.css';
+import React, { useState } from "react";
+import SidebarMenu from "../molecules/SidebarMenu";
+import Logo from "../atoms/Logo";
+import PurchaseItem from "../organisms/PurchaseItem";
+import ModalPurchase from "../molecules/ModalPurchase";
+import "../styles/pages/PurchaseHistory.css";
 
 const PurchaseHistory = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newPurchase, setNewPurchase] = useState({
-    product: '',
-    provider: '',
-    quantity: ''
+    product: "",
+    provider: "",
+    quantity: "",
   });
 
   const toggleMenu = () => {
@@ -29,9 +29,27 @@ const PurchaseHistory = () => {
   };
 
   const purchases = [
-    { product: 'Producto', provider: 'Proveedor', price: '$ 999.99', quantity: '999', date: '10-10-2000' },
-    { product: 'Producto', provider: 'Proveedor', price: '$ 999.99', quantity: '999', date: '10-10-2000' },
-    { product: 'Producto', provider: 'Proveedor', price: '$ 999.99', quantity: '999', date: '10-10-2000' }
+    {
+      product: "Producto",
+      provider: "Proveedor",
+      price: "$ 999.99",
+      quantity: "999",
+      date: "10-10-2000",
+    },
+    {
+      product: "Producto",
+      provider: "Proveedor",
+      price: "$ 999.99",
+      quantity: "999",
+      date: "10-10-2000",
+    },
+    {
+      product: "Producto",
+      provider: "Proveedor",
+      price: "$ 999.99",
+      quantity: "999",
+      date: "10-10-2000",
+    },
   ];
 
   return (
@@ -59,7 +77,10 @@ const PurchaseHistory = () => {
       <div className="header-actions">
         <h2>Historial de compras</h2>
         <div className="purchase-right-actions">
-          <i className="fa-solid fa-plus purchase-new-product-btn" onClick={handleModalPurchaseToggle}></i>
+          <i
+            className="fa-solid fa-plus purchase-new-product-btn"
+            onClick={handleModalPurchaseToggle}
+          ></i>
         </div>
       </div>
       <div className="purchase-list">

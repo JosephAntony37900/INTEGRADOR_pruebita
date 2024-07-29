@@ -1,14 +1,20 @@
-import React from 'react';
-import Button from '../atoms/Button';
-import '../styles/molecules/ModalPurchase.css';
+import React from "react";
+import Button from "../atoms/Button";
+import "../styles/molecules/ModalPurchase.css";
 
-const ModalPurchase = ({ isOpen, onClose, newPurchase, setNewPurchase, handleAddPurchase }) => {
+const ModalPurchase = ({
+  isOpen,
+  onClose,
+  newPurchase,
+  setNewPurchase,
+  handleAddPurchase,
+}) => {
   if (!isOpen) return null;
 
   const handleChange = (e) => {
     setNewPurchase({
       ...newPurchase,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -71,7 +77,11 @@ const ModalPurchase = ({ isOpen, onClose, newPurchase, setNewPurchase, handleAdd
           </form>
         </div>
         <div className="modal-purchase-footer">
-          <Button label="Agregar" className="modal-purchase-submit-btn-add" onClick={handleAddPurchase} />
+          <Button
+            label="Agregar"
+            className="modal-purchase-submit-btn-add"
+            onClick={handleAddPurchase}
+          />
         </div>
       </div>
     </div>
