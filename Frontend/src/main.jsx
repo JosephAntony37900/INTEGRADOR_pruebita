@@ -6,6 +6,7 @@ import LoginForm from './components/organisms/LoginForm';
 import RegisterForm from './components/organisms/RegisterForm';
 import ReportSales from './components/pages/ReportSales';
 import ChartSales from './components/pages/ChartSales';
+import PurchaseHistory from './components/pages/PurchaseHistory';
 import SalesHistory from './components/pages/SalesHistory';
 import ProductManagement from './components/pages/ProductManagement';
 import ManageSuppliers from './components/pages/ManageSuppliers';
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/client", element: <ClientPage /> },
       { path: "/info", element: <InformationProduct /> },
       { path: "/categories", element: <ManageCategories /> },
+      { path: "/purchasehistory", element: <PurchaseHistory/>},
       { path: "/saleshistory", element: <SalesHistory/> },
       { path: "/reportsales", element: <ReportSales/> },
       { path: "/chartsales", element: <ChartSales/> }
